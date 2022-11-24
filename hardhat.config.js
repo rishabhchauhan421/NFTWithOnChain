@@ -1,7 +1,7 @@
 require("dotenv").config();
 require("@nomicfoundation/hardhat-toolbox");
-require("@nomicfoundation/hardhat-waffle");
-require("@nomicfoundation/etherscan");
+require("@nomicfoundation/hardhat-chai-matchers");
+require("@nomiclabs/hardhat-etherscan");
 
 
 
@@ -10,7 +10,7 @@ module.exports = {
   solidity: "0.8.17",
   networks: {
     mumbai:{
-      url:process.env.TEST_RPC,
+      url: process.env.TESTNET_RPC,
       accounts:[process.env.PRIVATE_KEY]
     },
   },
